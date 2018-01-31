@@ -987,16 +987,6 @@ public class WVJBWebView extends WebView {
 
         }
 
-        @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-        @Override
-        public void onUnhandledInputEvent(WebView view, InputEvent event) {
-            if (webViewClient != null) {
-                webViewClient.onUnhandledInputEvent(view, event);
-            } else {
-                super.onUnhandledInputEvent(view, event);
-            }
-
-        }
 
         @Override
         public void onScaleChanged(WebView view, float oldScale, float newScale) {

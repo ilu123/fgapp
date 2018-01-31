@@ -1,4 +1,4 @@
-package wendu.jsbdemo;
+package com.fashiongo.app.commons;
 
 import android.util.Base64;
 
