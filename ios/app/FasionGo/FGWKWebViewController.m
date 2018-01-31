@@ -6,8 +6,10 @@
 
 #import "FGWKWebViewController.h"
 #import "WebViewJavascriptBridge.h"
+#import <TencentOpenAPI/TencentOAuth.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
-@interface FGWKWebViewController ()
+@interface FGWKWebViewController ()<TencentSessionDelegate>
 
 @property WebViewJavascriptBridge* bridge;
 
@@ -64,10 +66,20 @@
 }
 
 - (void)callHandler:(id)sender {
-    id data = @{ @"greetingFromObjC": @"Hi there, JS!" };
-    [_bridge callHandler:@"callJavascriptHandler" data:data responseCallback:^(id response) {
-        NSLog(@"testJavascriptHandler responded: %@", response);
-    }];
+//    id data = @{ @"greetingFromObjC": @"Hi there, JS!" };
+//    [_bridge callHandler:@"callJavascriptHandler" data:data responseCallback:^(id response) {
+//        NSLog(@"testJavascriptHandler responded: %@", response);
+//    }];
+    TencentOAuth *_oauth = [[TencentOAuth alloc] initWithAppId:@"1106709966" andDelegate:self];
+    QQApiURLObject *urlObject = [QQApiURLObject
+                                 objectWithURL:[NSURL URLWithString:@"https://www.baidu.com"]
+                                 title:@"团组发票管理"
+                                 description:@"很好用的哟我开发的哟哈哈哈哈"
+                                 previewImageURL:[NSURL URLWithString:@"https://www.baidu.com/img/baidu_jgylogo3.gif"]
+                                 targetContentType:QQApiURLTargetTypeNews];
+    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:urlObject];
+    // 分享给好友
+    [QQApiInterface sendReq:req];
 }
 
 @end

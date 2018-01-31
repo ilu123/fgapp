@@ -16,6 +16,10 @@
 		21C6BDF42022136A001C306E /* FasionGo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BDF12022136A001C306E /* FasionGo-Info.plist */; };
 		21C6BDF820221376001C306E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BDF620221376001C306E /* InfoPlist.strings */; };
 		21C6BDFA202214A6001C306E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C6BDF9202214A6001C306E /* main.m */; };
+		21C6BDFC202216F0001C306E /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BDFB202216F0001C306E /* TencentOpenAPI.framework */; };
+		21C6BDFF20221770001C306E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BDFE20221770001C306E /* SystemConfiguration.framework */; };
+		21C6BE0120221785001C306E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE0020221785001C306E /* Security.framework */; };
+		21C6BE032022178A001C306E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE022022178A001C306E /* MobileCoreServices.framework */; };
 		2C1562C0176BA63500B4AE50 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1562A9176B9F6200B4AE50 /* WebViewJavascriptBridge.m */; };
 		2C3E7C461C5A890A00A1E322 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E7C451C5A890A00A1E322 /* WebViewJavascriptBridge_JS.m */; };
 		2CA0465C1711AC8E006DEE8B /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CA0465B1711AC8D006DEE8B /* ExampleApp.html */; };
@@ -37,6 +41,10 @@
 		21C6BDF22022136A001C306E /* FasionGo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FasionGo-Prefix.pch"; path = "FasionGo/FasionGo-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		21C6BDF720221376001C306E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = FasionGo/en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		21C6BDF9202214A6001C306E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = FasionGo/main.m; sourceTree = SOURCE_ROOT; };
+		21C6BDFB202216F0001C306E /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		21C6BDFE20221770001C306E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		21C6BE0020221785001C306E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		21C6BE022022178A001C306E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2C1562A8176B9F6200B4AE50 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
 		2C1562A9176B9F6200B4AE50 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		2C3E7C441C5A890A00A1E322 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
@@ -53,7 +61,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21C6BE032022178A001C306E /* MobileCoreServices.framework in Frameworks */,
+				21C6BE0120221785001C306E /* Security.framework in Frameworks */,
+				21C6BDFF20221770001C306E /* SystemConfiguration.framework in Frameworks */,
 				0E4E9D4C1A101E0B00043087 /* WebKit.framework in Frameworks */,
+				21C6BDFC202216F0001C306E /* TencentOpenAPI.framework in Frameworks */,
 				2CEB3EC01602563600548120 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -125,6 +137,10 @@
 		2CEB3EBE1602563600548120 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21C6BE022022178A001C306E /* MobileCoreServices.framework */,
+				21C6BE0020221785001C306E /* Security.framework */,
+				21C6BDFE20221770001C306E /* SystemConfiguration.framework */,
+				21C6BDFB202216F0001C306E /* TencentOpenAPI.framework */,
 				0E8082DC19EDD98700479452 /* WebKit.framework */,
 				2CEB3EBF1602563600548120 /* UIKit.framework */,
 				2CEB3EC11602563600548120 /* Foundation.framework */,
@@ -170,6 +186,7 @@
 				ORGANIZATIONNAME = "Marcus Westin";
 				TargetAttributes = {
 					2CEB3EBA1602563600548120 = {
+						DevelopmentTeam = DPC9EN366T;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -313,15 +330,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: zhao tianbao (SBZ7V9X4D7)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasionGo/FasionGo-Prefix.pch";
 				INFOPLIST_FILE = "FasionGo/FasionGo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FasionGo;
+				QQ_APPID = 1106709966;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TENCENT_APPID = 1106709966;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -330,14 +355,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasionGo/FasionGo-Prefix.pch";
 				INFOPLIST_FILE = "FasionGo/FasionGo-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FasionGo;
+				QQ_APPID = 1106709966;
 				SWIFT_VERSION = 3.0;
+				TENCENT_APPID = 1106709966;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
