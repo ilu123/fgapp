@@ -8,12 +8,8 @@
 		.logLine { border-bottom:1px solid #ccc; padding:4px 2px; font-family:courier; font-size:11px; }
 	</style>
 </head><body>
-<h1>WebViewJavascriptBridge Demo</h1>
+<h1>Demo</h1>
 <script>
-	window.onerror = function(err) {
-		log('window.onerror: ' + err)
-	}
-
     function setupWebViewJavascriptBridge(onResult) {
         if (window.WebViewJavascriptBridge) { return onResult(WebViewJavascriptBridge); }
         if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(onResult); }
@@ -26,35 +22,20 @@
     }
 
     setupWebViewJavascriptBridge(function(bridge) {
-		var uniqueId = 1
-		function log(message, data) {
-			var log = document.getElementById('log')
-			var el = document.createElement('div')
-			el.className = 'logLine'
-			el.innerHTML = uniqueId++ + '. ' + message + ':<br/>' + JSON.stringify(data)
-			if (log.children.length) { log.insertBefore(el, log.children[0]) }
-			else { log.appendChild(el) }
-		}
-
-		bridge.registerHandler('testJavascriptHandler', function(data, responseCallback) {
-			log('Java called testJavascriptHandler with', data)
+		bridge.registerHandler('callJavascriptHandler', function(data, responseCallback) {
 			var responseData = { 'Javascript Says':'Right back atcha!' }
-			log('JS responding with', responseData)
 			responseCallback(responseData)
 		})
 
 		document.body.appendChild(document.createElement('br'))
-
 		var callbackButton = document.getElementById('buttons').appendChild(document.createElement('button'))
 		callbackButton.innerHTML = 'Fire testJavaCallback'
 		callbackButton.onclick = function(e) {
 			e.preventDefault()
-			log('JS calling handler "testJavaCallback"')
-			bridge.callHandler('testJavaCallback', {'foo': 'bar'}, function(response) {
-				log('JS got response', response)
+			bridge.callHandler('clickShare', {'title': 'xxx', 'description': 'xxx', 'targetUrl':'xxx', 'imageUrl':'xxx'}, function(response) {
+
 			})
 		}
 	})
 	</script>
-<div id='buttons'></div> <div id='log'></div>
 </body></html>

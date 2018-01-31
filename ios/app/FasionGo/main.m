@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
 #import <TargetConditionals.h>
 #import <dlfcn.h>
-#import "ExampleAppDelegate.h"
+#import "FGAppDelegate.h"
 
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
@@ -21,6 +21,6 @@ int main(int argc, char * argv[])
 #endif
         }
         
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ExampleAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([FGAppDelegate class]));
     }
 }

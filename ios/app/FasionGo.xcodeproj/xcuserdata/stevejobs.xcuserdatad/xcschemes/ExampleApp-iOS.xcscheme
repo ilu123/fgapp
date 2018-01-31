@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2CEB3EBA1602563600548120"
                BuildableName = "ExampleApp-iOS.app"
-               BlueprintName = "ExampleApp-iOS"
-               ReferencedContainer = "container:ExampleApp-iOS.xcodeproj">
+               BlueprintName = "FasionGo"
+               ReferencedContainer = "container:FasionGo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2CEB3EBA1602563600548120"
             BuildableName = "ExampleApp-iOS.app"
-            BlueprintName = "ExampleApp-iOS"
-            ReferencedContainer = "container:ExampleApp-iOS.xcodeproj">
+            BlueprintName = "FasionGo"
+            ReferencedContainer = "container:FasionGo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2CEB3EBA1602563600548120"
             BuildableName = "ExampleApp-iOS.app"
-            BlueprintName = "ExampleApp-iOS"
-            ReferencedContainer = "container:ExampleApp-iOS.xcodeproj">
+            BlueprintName = "FasionGo"
+            ReferencedContainer = "container:FasionGo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2CEB3EBA1602563600548120"
             BuildableName = "ExampleApp-iOS.app"
-            BlueprintName = "ExampleApp-iOS"
-            ReferencedContainer = "container:ExampleApp-iOS.xcodeproj">
+            BlueprintName = "FasionGo"
+            ReferencedContainer = "container:FasionGo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

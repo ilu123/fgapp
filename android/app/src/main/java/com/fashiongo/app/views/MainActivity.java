@@ -1,6 +1,7 @@
 package com.fashiongo.app.views;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.fashiongo.app.R;
@@ -9,6 +10,8 @@ import com.tencent.connect.share.QQShare;
 import com.tencent.tauth.IUiListener;
 import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
+
+import org.json.JSONObject;
 
 import java.util.HashMap;
 
@@ -36,17 +39,18 @@ public class MainActivity extends BaseActivity {
 
         final WVJBWebView webView = (WVJBWebView) findViewById(R.id.webview);
 
-        webView.registerHandler("testJavaCallback", new WVJBWebView.WVJBHandler() {
+        webView.registerHandler("clickShare", new WVJBWebView.WVJBHandler() {
             @Override
             public void handler(Object data, WVJBWebView.WVJBResponseCallback callback) {
-                callback.onResult("Response from testJavaCallback");
+                //callback.onResult("Response from testJavaCallback");
+                onClickShare(null);
             }
         });
 
-        HashMap<String, String> data = new HashMap<String, String>() {{
-            put("greetingFromJava", "Hi there, JS!");
-        }};
-//        webView.callHandler("testJavascriptHandler", new JSONObject(data), new WVJBWebView.WVJBResponseCallback() {
+//        HashMap<String, String> data = new HashMap<String, String>() {{
+//            put("greetingFromJava", "Hi there, JS!");
+//        }};
+//        webView.callHandler("callJavascriptHandler", new JSONObject(data), new WVJBWebView.WVJBResponseCallback() {
 //            @Override
 //            public void onResult(Object data) {
 //                Log.d("testJavascriptHandler", data.toString());
