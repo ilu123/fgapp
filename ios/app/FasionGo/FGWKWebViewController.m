@@ -2,8 +2,6 @@
 //  FGWKWebViewController.m
 //  FGApp-iOS
 //
-//  Created by Marcus Westin on 1/13/14.
-//  Copyright (c) 2014 Marcus Westin. All rights reserved.
 //
 
 #import "FGWKWebViewController.h"
@@ -27,12 +25,12 @@
     _bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
     [_bridge setWebViewDelegate:self];
     
-    [_bridge registerHandler:@"testObjcCallback" handler:^(id data, WVJBResponseCallback responseCallback) {
+    [_bridge registerHandler:@"clickShare" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"testObjcCallback called: %@", data);
         responseCallback(@"Response from testObjcCallback");
     }];
     
-    [_bridge callHandler:@"testJavascriptHandler" data:@{ @"foo":@"before ready" }];
+    [_bridge callHandler:@"callJavascriptHandler" data:@{ @"foo":@"before ready" }];
     
     [self renderButtons:webView];
     
@@ -67,7 +65,7 @@
 
 - (void)callHandler:(id)sender {
     id data = @{ @"greetingFromObjC": @"Hi there, JS!" };
-    [_bridge callHandler:@"testJavascriptHandler" data:data responseCallback:^(id response) {
+    [_bridge callHandler:@"callJavascriptHandler" data:data responseCallback:^(id response) {
         NSLog(@"testJavascriptHandler responded: %@", response);
     }];
 }
