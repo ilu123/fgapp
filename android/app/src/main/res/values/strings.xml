@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Fashion Go</string>
 
+    <string name="share_friends">朋友圈</string>
+    <string name="share_session">微信好友</string>
+    <string name="share_qq">QQ好友</string>
 </resources>

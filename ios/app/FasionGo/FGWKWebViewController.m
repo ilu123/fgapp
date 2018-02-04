@@ -6,21 +6,31 @@
 
 #import "FGWKWebViewController.h"
 #import "WebViewJavascriptBridge.h"
+#import <Foundation/Foundation.h>
+#import "WXApiObject.h"
+#import "WXApi.h"
 #import <TencentOpenAPI/TencentOAuth.h>
 #import <TencentOpenAPI/QQApiInterface.h>
 
-@interface FGWKWebViewController ()<TencentSessionDelegate>
+@interface FGWKWebViewController ()
 
 @property WebViewJavascriptBridge* bridge;
-
+@property UIButton *viewShare;
 @end
 
 @implementation FGWKWebViewController
+{
+    __block NSDictionary *_shareData;
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     if (_bridge) { return; }
     
     WKWebView* webView = [[NSClassFromString(@"WKWebView") alloc] initWithFrame:self.view.bounds];
+    webView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
+    UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|
+    UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin;
+    
     webView.navigationDelegate = self;
     [self.view addSubview:webView];
     [WebViewJavascriptBridge enableLogging];
@@ -29,14 +39,14 @@
     
     [_bridge registerHandler:@"clickShare" handler:^(id data, WVJBResponseCallback responseCallback) {
         NSLog(@"testObjcCallback called: %@", data);
-        responseCallback(@"Response from testObjcCallback");
+        _shareData = data;
+        [self showShare:data];
     }];
     
-    [_bridge callHandler:@"callJavascriptHandler" data:@{ @"foo":@"before ready" }];
+    //[_bridge callHandler:@"callJavascriptHandler" data:@{ @"foo":@"before ready" }];
     
-    [self renderButtons:webView];
-    
-    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://139.199.13.114:8888/fgapp/login.html"]]];
+    [self showShare:nil];
+    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://123.207.136.167:8888/fgapp/login.html"]]];
 }
 
 - (void)webView:(WKWebView *)webView didStartProvisionalNavigation:(WKNavigation *)navigation {
@@ -47,22 +57,46 @@
     NSLog(@"webViewDidFinishLoad");
 }
 
-- (void)renderButtons:(WKWebView*)webView {
-    UIFont* font = [UIFont fontWithName:@"HelveticaNeue" size:12.0];
-    
-    UIButton *callbackButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [callbackButton setTitle:@"Call handler" forState:UIControlStateNormal];
-    [callbackButton addTarget:self action:@selector(callHandler:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view insertSubview:callbackButton aboveSubview:webView];
-    callbackButton.frame = CGRectMake(10, 400, 100, 35);
-    callbackButton.titleLabel.font = font;
-    
-    UIButton* reloadButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [reloadButton setTitle:@"Reload webview" forState:UIControlStateNormal];
-    [reloadButton addTarget:webView action:@selector(reload) forControlEvents:UIControlEventTouchUpInside];
-    [self.view insertSubview:reloadButton aboveSubview:webView];
-    reloadButton.frame = CGRectMake(110, 400, 100, 35);
-    reloadButton.titleLabel.font = font;
+- (void)showShare:(NSDictionary*)data {
+    if (!self.viewShare) {
+        float h = 42;
+        float w = self.view.frame.size.width;
+        UIButton *container = [UIButton buttonWithType:UIButtonTypeCustom];
+        container.frame = self.view.bounds;
+        container.backgroundColor = [UIColor clearColor];
+        [container addTarget:self action:@selector(dismissShare:) forControlEvents:UIControlEventTouchUpInside];
+        
+        UIView *v= [[UIView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height-h, self.view.frame.size.width, h)];
+        v.backgroundColor = [UIColor whiteColor];
+        
+        UIButton *b = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+        b.backgroundColor = [UIColor clearColor];
+        [b setImage:[UIImage imageNamed:@"icon_qq"] forState:UIControlStateNormal];
+        b.center = CGPointMake(w/6, h/2);
+        [b addTarget:self action:@selector(callHandler:) forControlEvents:UIControlEventTouchUpInside];
+        b.tag = 0;
+        [v addSubview:b];
+        
+        b = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+        b.backgroundColor = [UIColor clearColor];
+        [b setImage:[UIImage imageNamed:@"ic_wx"] forState:UIControlStateNormal];
+        b.center = CGPointMake(w/2, h/2);
+        [b addTarget:self action:@selector(callHandler:) forControlEvents:UIControlEventTouchUpInside];
+        b.tag = 1;
+        [v addSubview:b];
+        
+        b = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 32, 32)];
+        b.backgroundColor = [UIColor clearColor];
+        [b setImage:[UIImage imageNamed:@"ic_wx_friends"] forState:UIControlStateNormal];
+        b.center = CGPointMake(w*5/6, h/2);
+        [b addTarget:self action:@selector(callHandler:) forControlEvents:UIControlEventTouchUpInside];
+        b.tag = 2;
+        [v addSubview:b];
+        
+        [container addSubview:v];
+        self.viewShare = container;
+    }
+    [self.view addSubview:self.viewShare];
 }
 
 - (void)callHandler:(id)sender {
@@ -70,16 +104,42 @@
 //    [_bridge callHandler:@"callJavascriptHandler" data:data responseCallback:^(id response) {
 //        NSLog(@"testJavascriptHandler responded: %@", response);
 //    }];
-    TencentOAuth *_oauth = [[TencentOAuth alloc] initWithAppId:@"1106709966" andDelegate:self];
-    QQApiURLObject *urlObject = [QQApiURLObject
-                                 objectWithURL:[NSURL URLWithString:@"https://www.baidu.com"]
-                                 title:@"团组发票管理"
-                                 description:@"很好用的哟我开发的哟哈哈哈哈"
-                                 previewImageURL:[NSURL URLWithString:@"https://www.baidu.com/img/baidu_jgylogo3.gif"]
-                                 targetContentType:QQApiURLTargetTypeNews];
-    SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:urlObject];
-    // 分享给好友
-    [QQApiInterface sendReq:req];
+    
+    NSString *targetUrl = [NSString stringWithFormat:@"%@", [_shareData objectForKey:@"targetUrl"]];
+    NSString *title=[NSString stringWithFormat:@"%@", [_shareData objectForKey:@"title"]];
+    NSString *imageUrl = [NSString stringWithFormat:@"%@", [_shareData objectForKey:@"imageUrl"]];
+    NSString *desc = [NSString stringWithFormat:@"%@", [_shareData objectForKey:@"description"]];
+    if ([sender tag] == 0) {
+        QQApiURLObject *urlObject = [QQApiURLObject
+                                     objectWithURL:[NSURL URLWithString:targetUrl]
+                                     title:title
+                                     description:desc
+                                     previewImageURL:[NSURL URLWithString:imageUrl]
+                                     targetContentType:QQApiURLTargetTypeNews];
+        SendMessageToQQReq *req = [SendMessageToQQReq reqWithContent:urlObject];
+        // 分享给好友
+        [QQApiInterface sendReq:req];
+    }else{
+        UIImage *thumbImage = [UIImage imageNamed:@"logo.png"];
+        WXWebpageObject *ext = [WXWebpageObject object];
+        ext.webpageUrl = targetUrl;
+        
+        WXMediaMessage *message = [WXMediaMessage message];
+        message.title = title;
+        message.description = desc;
+        [message setThumbImage:thumbImage];
+        message.mediaObject = ext;
+        message.mediaTagName = [[NSDate date] description];
+        
+        SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+        req.message = message;
+        req.scene = [sender tag] == 1 ? WXSceneSession : WXSceneTimeline;
+        [WXApi sendReq:req];
+    }
+}
+
+- (void)dismissShare:(id)w {
+    [self.viewShare removeFromSuperview];
 }
 
 @end
