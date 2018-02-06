@@ -30,8 +30,8 @@
     webView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth|
     UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|
     UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleBottomMargin;
-    
     webView.navigationDelegate = self;
+
     [self.view addSubview:webView];
     [WebViewJavascriptBridge enableLogging];
     _bridge = [WebViewJavascriptBridge bridgeForWebView:webView];
@@ -45,7 +45,7 @@
     
     //[_bridge callHandler:@"callJavascriptHandler" data:@{ @"foo":@"before ready" }];
     
-    [self showShare:nil];
+    //[self showShare:nil];
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://123.207.136.167:8888/fgapp/login.html"]]];
 }
 

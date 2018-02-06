@@ -8,20 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0E4E9D4C1A101E0B00043087 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E8082DC19EDD98700479452 /* WebKit.framework */; };
-		0E50601C1A01B442000BEEEA /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E50601B1A01B442000BEEEA /* WebViewJavascriptBridgeBase.m */; };
-		0E8082DB19EDC32300479452 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E8082DA19EDC32300479452 /* WKWebViewJavascriptBridge.m */; };
 		21C6BDE72022133E001C306E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BDE62022133E001C306E /* Default-568h@2x.png */; };
 		21C6BDEE2022134E001C306E /* FGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C6BDE92022134E001C306E /* FGAppDelegate.m */; };
 		21C6BDF02022134E001C306E /* FGWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C6BDED2022134E001C306E /* FGWKWebViewController.m */; };
-		21C6BDF42022136A001C306E /* FasionGo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BDF12022136A001C306E /* FasionGo-Info.plist */; };
-		21C6BDF820221376001C306E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BDF620221376001C306E /* InfoPlist.strings */; };
 		21C6BDFA202214A6001C306E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C6BDF9202214A6001C306E /* main.m */; };
-		21C6BDFC202216F0001C306E /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BDFB202216F0001C306E /* TencentOpenAPI.framework */; };
 		21C6BDFF20221770001C306E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BDFE20221770001C306E /* SystemConfiguration.framework */; };
 		21C6BE0120221785001C306E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE0020221785001C306E /* Security.framework */; };
 		21C6BE032022178A001C306E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE022022178A001C306E /* MobileCoreServices.framework */; };
 		21C6BE0C20258E75001C306E /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE0720258E75001C306E /* libWeChatSDK.a */; };
-		21C6BE0D20258E75001C306E /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BE0820258E75001C306E /* README.txt */; };
 		21C6BE0F20258EA4001C306E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE0E20258EA4001C306E /* CoreTelephony.framework */; };
 		21C6BE1120258EB1001C306E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE1020258EB1001C306E /* libc++.tbd */; };
 		21C6BE1320258EB6001C306E /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BE1220258EB6001C306E /* libsqlite3.0.tbd */; };
@@ -32,17 +26,17 @@
 		21C6BE1F2025934E001C306E /* icon_qq.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BE1C2025934E001C306E /* icon_qq.png */; };
 		21C6BE212025E162001C306E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BE202025E161001C306E /* Images.xcassets */; };
 		21C6BE232025E1B7001C306E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21C6BE222025E1B7001C306E /* logo.png */; };
-		2C1562C0176BA63500B4AE50 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C1562A9176B9F6200B4AE50 /* WebViewJavascriptBridge.m */; };
-		2C3E7C461C5A890A00A1E322 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3E7C451C5A890A00A1E322 /* WebViewJavascriptBridge_JS.m */; };
-		2CA0465C1711AC8E006DEE8B /* ExampleApp.html in Resources */ = {isa = PBXBuildFile; fileRef = 2CA0465B1711AC8D006DEE8B /* ExampleApp.html */; };
+		21CE7C772029D7C200CD6666 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21C6BDFB202216F0001C306E /* TencentOpenAPI.framework */; };
+		21CE7C9C2029DA1900CD6666 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CE7C952029DA1900CD6666 /* WebViewJavascriptBridge.m */; };
+		21CE7C9D2029DA1900CD6666 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CE7C972029DA1900CD6666 /* WebViewJavascriptBridge_JS.m */; };
+		21CE7C9E2029DA1900CD6666 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CE7C992029DA1900CD6666 /* WebViewJavascriptBridgeBase.m */; };
+		21CE7C9F2029DA1900CD6666 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CE7C9B2029DA1900CD6666 /* WKWebViewJavascriptBridge.m */; };
+		21CE7CA42029DD2500CD6666 /* UIViewController+Dismis_FileUploadPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CE7CA12029DD2500CD6666 /* UIViewController+Dismis_FileUploadPanel.m */; };
+		21CE7CA52029DD2500CD6666 /* UIViewController+Intercept_FileUploadPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CE7CA32029DD2500CD6666 /* UIViewController+Intercept_FileUploadPane.m */; };
 		2CEB3EC01602563600548120 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEB3EBF1602563600548120 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E50601B1A01B442000BEEEA /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
-		0E50601D1A01B44C000BEEEA /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
-		0E8082D919EDC32300479452 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		0E8082DA19EDC32300479452 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
 		0E8082DC19EDD98700479452 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		21C6BDE62022133E001C306E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "FasionGo/Default-568h@2x.png"; sourceTree = "<group>"; };
 		21C6BDE82022134E001C306E /* FGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FGAppDelegate.h; path = FasionGo/FGAppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -72,11 +66,18 @@
 		21C6BE1C2025934E001C306E /* icon_qq.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_qq.png; sourceTree = "<group>"; };
 		21C6BE202025E161001C306E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FasionGo/Images.xcassets; sourceTree = "<group>"; };
 		21C6BE222025E1B7001C306E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		2C1562A8176B9F6200B4AE50 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
-		2C1562A9176B9F6200B4AE50 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
-		2C3E7C441C5A890A00A1E322 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
-		2C3E7C451C5A890A00A1E322 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
-		2CA0465B1711AC8D006DEE8B /* ExampleApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = ExampleApp.html; sourceTree = SOURCE_ROOT; };
+		21CE7C942029DA1900CD6666 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		21CE7C952029DA1900CD6666 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		21CE7C962029DA1900CD6666 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		21CE7C972029DA1900CD6666 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		21CE7C982029DA1900CD6666 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		21CE7C992029DA1900CD6666 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		21CE7C9A2029DA1900CD6666 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		21CE7C9B2029DA1900CD6666 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		21CE7CA02029DD2500CD6666 /* UIViewController+Dismis_FileUploadPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Dismis_FileUploadPanel.h"; path = "FasionGo/UIViewController+Dismis_FileUploadPanel.h"; sourceTree = SOURCE_ROOT; };
+		21CE7CA12029DD2500CD6666 /* UIViewController+Dismis_FileUploadPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Dismis_FileUploadPanel.m"; path = "FasionGo/UIViewController+Dismis_FileUploadPanel.m"; sourceTree = SOURCE_ROOT; };
+		21CE7CA22029DD2500CD6666 /* UIViewController+Intercept_FileUploadPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Intercept_FileUploadPane.h"; path = "FasionGo/UIViewController+Intercept_FileUploadPane.h"; sourceTree = SOURCE_ROOT; };
+		21CE7CA32029DD2500CD6666 /* UIViewController+Intercept_FileUploadPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Intercept_FileUploadPane.m"; path = "FasionGo/UIViewController+Intercept_FileUploadPane.m"; sourceTree = SOURCE_ROOT; };
 		2CEB3EBB1602563600548120 /* FasionGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FasionGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CEB3EBF1602563600548120 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2CEB3EC11602563600548120 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C6BE1520258EBB001C306E /* libz.tbd in Frameworks */,
+				21CE7C772029D7C200CD6666 /* TencentOpenAPI.framework in Frameworks */,
 				21C6BE1320258EB6001C306E /* libsqlite3.0.tbd in Frameworks */,
 				21C6BE1120258EB1001C306E /* libc++.tbd in Frameworks */,
 				21C6BE0F20258EA4001C306E /* CoreTelephony.framework in Frameworks */,
@@ -97,7 +99,6 @@
 				21C6BE0120221785001C306E /* Security.framework in Frameworks */,
 				21C6BDFF20221770001C306E /* SystemConfiguration.framework in Frameworks */,
 				0E4E9D4C1A101E0B00043087 /* WebKit.framework in Frameworks */,
-				21C6BDFC202216F0001C306E /* TencentOpenAPI.framework in Frameworks */,
 				2CEB3EC01602563600548120 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,31 +138,33 @@
 			path = share;
 			sourceTree = "<group>";
 		};
-		2C1562A7176B9F5400B4AE50 /* WebViewJavascriptBridge */ = {
+		21CE7C932029DA1900CD6666 /* WebViewJavascriptBridge */ = {
 			isa = PBXGroup;
 			children = (
-				2C3E7C441C5A890A00A1E322 /* WebViewJavascriptBridge_JS.h */,
-				2C3E7C451C5A890A00A1E322 /* WebViewJavascriptBridge_JS.m */,
-				2C1562A8176B9F6200B4AE50 /* WebViewJavascriptBridge.h */,
-				2C1562A9176B9F6200B4AE50 /* WebViewJavascriptBridge.m */,
-				0E8082DA19EDC32300479452 /* WKWebViewJavascriptBridge.m */,
-				0E8082D919EDC32300479452 /* WKWebViewJavascriptBridge.h */,
-				0E50601B1A01B442000BEEEA /* WebViewJavascriptBridgeBase.m */,
-				0E50601D1A01B44C000BEEEA /* WebViewJavascriptBridgeBase.h */,
+				21CE7C942029DA1900CD6666 /* WebViewJavascriptBridge.h */,
+				21CE7C952029DA1900CD6666 /* WebViewJavascriptBridge.m */,
+				21CE7C962029DA1900CD6666 /* WebViewJavascriptBridge_JS.h */,
+				21CE7C972029DA1900CD6666 /* WebViewJavascriptBridge_JS.m */,
+				21CE7C982029DA1900CD6666 /* WebViewJavascriptBridgeBase.h */,
+				21CE7C992029DA1900CD6666 /* WebViewJavascriptBridgeBase.m */,
+				21CE7C9A2029DA1900CD6666 /* WKWebViewJavascriptBridge.h */,
+				21CE7C9B2029DA1900CD6666 /* WKWebViewJavascriptBridge.m */,
 			);
-			name = WebViewJavascriptBridge;
-			path = ../../WebViewJavascriptBridge;
-			sourceTree = "<group>";
+			path = WebViewJavascriptBridge;
+			sourceTree = SOURCE_ROOT;
 		};
 		2CA045B617117439006DEE8B /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				2CA0465B1711AC8D006DEE8B /* ExampleApp.html */,
+				21CE7CA02029DD2500CD6666 /* UIViewController+Dismis_FileUploadPanel.h */,
+				21CE7CA12029DD2500CD6666 /* UIViewController+Dismis_FileUploadPanel.m */,
+				21CE7CA22029DD2500CD6666 /* UIViewController+Intercept_FileUploadPane.h */,
+				21CE7CA32029DD2500CD6666 /* UIViewController+Intercept_FileUploadPane.m */,
+				21CE7C932029DA1900CD6666 /* WebViewJavascriptBridge */,
 				21C6BDE82022134E001C306E /* FGAppDelegate.h */,
 				21C6BDE92022134E001C306E /* FGAppDelegate.m */,
 				21C6BDEC2022134E001C306E /* FGWKWebViewController.h */,
 				21C6BDED2022134E001C306E /* FGWKWebViewController.m */,
-				2C1562A7176B9F5400B4AE50 /* WebViewJavascriptBridge */,
 				2CA046211711A94E006DEE8B /* Supporting Files */,
 			);
 			name = Source;
@@ -289,13 +292,9 @@
 				21C6BE212025E162001C306E /* Images.xcassets in Resources */,
 				21C6BE232025E1B7001C306E /* logo.png in Resources */,
 				21C6BE1F2025934E001C306E /* icon_qq.png in Resources */,
-				2CA0465C1711AC8E006DEE8B /* ExampleApp.html in Resources */,
 				21C6BE172025913E001C306E /* main.storyboard in Resources */,
-				21C6BDF820221376001C306E /* InfoPlist.strings in Resources */,
-				21C6BDF42022136A001C306E /* FasionGo-Info.plist in Resources */,
 				21C6BE1D2025934E001C306E /* ic_wx.png in Resources */,
 				21C6BDE72022133E001C306E /* Default-568h@2x.png in Resources */,
-				21C6BE0D20258E75001C306E /* README.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +305,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C3E7C461C5A890A00A1E322 /* WebViewJavascriptBridge_JS.m in Sources */,
-				2C1562C0176BA63500B4AE50 /* WebViewJavascriptBridge.m in Sources */,
+				21CE7C9E2029DA1900CD6666 /* WebViewJavascriptBridgeBase.m in Sources */,
+				21CE7CA52029DD2500CD6666 /* UIViewController+Intercept_FileUploadPane.m in Sources */,
+				21CE7CA42029DD2500CD6666 /* UIViewController+Dismis_FileUploadPanel.m in Sources */,
+				21CE7C9C2029DA1900CD6666 /* WebViewJavascriptBridge.m in Sources */,
+				21CE7C9D2029DA1900CD6666 /* WebViewJavascriptBridge_JS.m in Sources */,
+				21CE7C9F2029DA1900CD6666 /* WKWebViewJavascriptBridge.m in Sources */,
 				21C6BDF02022134E001C306E /* FGWKWebViewController.m in Sources */,
-				0E8082DB19EDC32300479452 /* WKWebViewJavascriptBridge.m in Sources */,
 				21C6BDEE2022134E001C306E /* FGAppDelegate.m in Sources */,
 				21C6BDFA202214A6001C306E /* main.m in Sources */,
-				0E50601C1A01B442000BEEEA /* WebViewJavascriptBridgeBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +412,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: zhao tianbao (SBZ7V9X4D7)";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -418,14 +420,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasionGo/FasionGo-Prefix.pch";
 				INFOPLIST_FILE = "FasionGo/FasionGo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WechtSDK",
 				);
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fashiongo.app;
 				PRODUCT_NAME = FasionGo;
 				QQ_APPID = 1106709966;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -440,7 +445,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Dalian Hi-Think Computer Technology, Corp.";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -448,15 +454,19 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FasionGo/FasionGo-Prefix.pch";
 				INFOPLIST_FILE = "FasionGo/FasionGo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/WechtSDK",
 				);
-				OTHER_LDFLAGS = "-all_load";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.example.${PRODUCT_NAME:rfc1034identifier}";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fashiongo.app;
 				PRODUCT_NAME = FasionGo;
+				PROVISIONING_PROFILE = "480b3f98-ef14-45a9-8271-25a36fb1a74b";
 				QQ_APPID = 1106709966;
 				SWIFT_VERSION = 3.0;
 				TENCENT_APPID = 1106716594;

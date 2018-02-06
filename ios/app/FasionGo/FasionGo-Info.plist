@@ -25,10 +25,6 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleURLTypes</key>
-	<key>NSCameraUsageDescription</key>
-	<string>需要您的同意才能使用相机</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要您的同意才能读取媒体资料库</string>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
@@ -123,7 +119,7 @@
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
-		<false/>
+		<true/>
 		<key>NSExceptionDomains</key>
 		<dict>
 			<key>gtimg.cn</key>
@@ -173,6 +169,10 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>上传图片需要访问相机</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>上传图片需要访问相机</string>
 	<key>TencentAppID</key>
 	<string>${TENCENT_APPID}</string>
 	<key>UIMainStoryboardFile</key>
